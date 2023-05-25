@@ -16,8 +16,13 @@ public class ScoreManager : MonoBehaviour
         // Adding score when player is alive
         if(GameObject.FindGameObjectWithTag("Player") != null)
         {
-            score += 1 * Time.deltaTime;
-            scoreText.text = ((int)score).ToString();
+            //score += 1 * Time.deltaTime;
+            
+            if(collision.gameObject.CompareTag("Target"))
+            {
+                score += 1;
+                scoreText.text = ((int)score).ToString();
+            }
         }
     }
 }

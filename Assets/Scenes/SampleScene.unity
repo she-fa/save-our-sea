@@ -1691,6 +1691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 176273626991138208, guid: e1a7c0e8cb87b279da73ca15ccc8a73a, type: 3}
+  target: {fileID: 3204002796257410184, guid: 8450dd6f8efb1eeb09f65f08469593ef, type: 3}
   maxX: 8
   minX: 7
   maxY: 4.25

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class CollisionWithPlayerAndBorder : MonoBehaviour
 {
     private GameObject player;
 
@@ -22,7 +22,14 @@ public class Obstacle : MonoBehaviour
 
         else if(collision.tag == "Player")
         {
-            Destroy(player.gameObject);
+            if(gameObject.CompareTag("Obstacle"))
+            {
+                Destroy(player.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);   
+            }
         }
     }
    
