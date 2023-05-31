@@ -2,27 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 // Description:
 // Score system is based on the time the player sustains in the game
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
-    private float score;
-
-    // Update is called once per frame
+    public TextMeshProUGUI scoreText;
+    private int score;
+ 
+    void Start()
+    {
+        score = 0;
+        UpdateScore(0); //not updating any score in the start of the game
+    }
+    
     void Update()
     {
-        // Adding score when player is alive
-        if(GameObject.FindGameObjectWithTag("Player") != null)
-        {
-            //score += 1 * Time.deltaTime;
-            
-            if(collision.gameObject.CompareTag("Target"))
-            {
-                score += 1;
-                scoreText.text = ((int)score).ToString();
-            }
-        }
+
     }
+   
+    public void UpdateScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        scoreText.text = "Score: " + score;  
+    }
+    
 }
