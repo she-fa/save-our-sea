@@ -44,6 +44,7 @@
      <Compile Include="Assets/Scripts/BackgroundMusic.cs" />
      <Compile Include="Assets/Scripts/LoopingBackground.cs" />
      <Compile Include="Assets/Scripts/ScoreManager.cs" />
+     <Compile Include="Assets/Scripts/AudioManager.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

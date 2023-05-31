@@ -5,15 +5,21 @@ using UnityEngine;
 public class CollisionWithPlayerAndBorder : MonoBehaviour
 {
     private GameObject player;
-    // public float score;
     public int score;
+    
     private ScoreManager scoreManager;
+    private AudioManager audioManager;
+    
+    public int pointValue;
+    public AudioClip soundeffect;
+
     
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player") ;
         scoreManager = GameObject.Find("Score Text").GetComponent<ScoreManager>();
+        audioManager = GameObject.Find("GameManager").GetComponent<AudioManager>();
     }
 
     // Destroying it when touching tag: Border
@@ -29,14 +35,20 @@ public class CollisionWithPlayerAndBorder : MonoBehaviour
             if(gameObject.CompareTag("Obstacle"))
             {
                 Destroy(player.gameObject);
+                audioManager.PlayOneShot(soundeffect);
+                Debug.Log("The soundeffect of obstacle is played");
+                //AudioSource.PlayClipAtPoint(soundeffect, this.gameObject.transform.position);
+
+
             }
             else
             {
                 Destroy(this.gameObject);
-                scoreManager.UpdateScore(5);
-                //Debug.Log(this.gameObject.name + "is destroyed");
-                //score += 1;
-               // Debug.Log("is the score increased?" + scoreText.text);
+                scoreManager.UpdateScore(pointValue);
+                audioManager.PlayOneShot(soundeffect);
+                Debug.Log("The soundeffect of target is played");
+
+                //AudioSource.PlayClipAtPoint(soundeffect, this.gameObject.transform.position);
             }
         }
     }
