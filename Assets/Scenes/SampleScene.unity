@@ -417,6 +417,7 @@ MonoBehaviour:
   score: 0
   pointValue: 0
   soundeffect: {fileID: 0}
+  volumeSoundeffect: 0
 --- !u!1 &350293826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1270,6 @@ GameObject:
   - component: {fileID: 1526662762}
   - component: {fileID: 1526662761}
   - component: {fileID: 1526662763}
-  - component: {fileID: 1526662764}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1323,18 +1323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 350293826}
---- !u!114 &1526662764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526662760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72bf4015edea0a72db69693ba5820078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1617240641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,15 +1421,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ce9654fedd62b03889d15625b8de6d21, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f52e23aa1bb182afc862011aaa098f95, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.19
   m_Pitch: 0.89
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 109
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

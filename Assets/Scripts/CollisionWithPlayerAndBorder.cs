@@ -8,10 +8,10 @@ public class CollisionWithPlayerAndBorder : MonoBehaviour
     public int score;
     
     private ScoreManager scoreManager;
-    private AudioManager audioManager;
     
     public int pointValue;
     public AudioClip soundeffect;
+    public float volumeSoundeffect;
 
     
     // Start is called before the first frame update
@@ -19,7 +19,6 @@ public class CollisionWithPlayerAndBorder : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player") ;
         scoreManager = GameObject.Find("Score Text").GetComponent<ScoreManager>();
-        audioManager = GameObject.Find("GameManager").GetComponent<AudioManager>();
     }
 
     // Destroying it when touching tag: Border
@@ -35,20 +34,13 @@ public class CollisionWithPlayerAndBorder : MonoBehaviour
             if(gameObject.CompareTag("Obstacle"))
             {
                 Destroy(player.gameObject);
-                audioManager.PlayOneShot(soundeffect);
-                Debug.Log("The soundeffect of obstacle is played");
-                //AudioSource.PlayClipAtPoint(soundeffect, this.gameObject.transform.position);
-
-
+                AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
             }
             else
             {
                 Destroy(this.gameObject);
                 scoreManager.UpdateScore(pointValue);
-                audioManager.PlayOneShot(soundeffect);
-                Debug.Log("The soundeffect of target is played");
-
-                //AudioSource.PlayClipAtPoint(soundeffect, this.gameObject.transform.position);
+                AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
             }
         }
     }

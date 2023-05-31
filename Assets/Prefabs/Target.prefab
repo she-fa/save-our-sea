@@ -133,7 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   pointValue: 5
-  soundeffect: {fileID: 8300000, guid: 2c26e4ce984c7e8c898c6d8f3891d526, type: 3}
+  soundeffect: {fileID: 8300000, guid: 614deea2e9b9792a58a91293d072afa3, type: 3}
+  volumeSoundeffect: 10
 --- !u!61 &5364114016512583099
 BoxCollider2D:
   m_ObjectHideFlags: 0

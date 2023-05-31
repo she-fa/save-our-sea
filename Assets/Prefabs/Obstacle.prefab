@@ -75,7 +75,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   pointValue: 0
-  soundeffect: {fileID: 8300000, guid: 1ca88edb29e38fd2d9872f694c0abfcf, type: 3}
+  soundeffect: {fileID: 8300000, guid: 0d1a5e46e6bcaaed1b0bcaefe821c436, type: 3}
+  volumeSoundeffect: 100
 --- !u!50 &4285643483919772387
 Rigidbody2D:
   serializedVersion: 4
