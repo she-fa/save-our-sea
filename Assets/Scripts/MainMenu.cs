@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        Application.Quit();
+        EditorApplication.isPlaying = false; // for playing mode in editor
+        Application.Quit(); // for quiting on the built version
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class GameOver : MonoBehaviour
 {
@@ -20,5 +21,12 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Clicking Exit button
+    public void ExitButton()
+    {
+        EditorApplication.isPlaying = false; // for playing mode in editor
+        Application.Quit(); // for quiting on the built version
     }
 }
