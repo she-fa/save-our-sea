@@ -570,7 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 440193347}
   scoreToWin: 10
-  nextLevelName: Level1
+  nextLevelName: Level3
   NextLevelButton: {fileID: 968819545}
 --- !u!114 &440193347
 MonoBehaviour:
@@ -1113,8 +1113,6 @@ GameObject:
   - component: {fileID: 885290850}
   - component: {fileID: 885290849}
   - component: {fileID: 885290848}
-  - component: {fileID: 885290851}
-  - component: {fileID: 885290852}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1147,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3c14a1805780778ae3307e50fdd832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSpeed: 10
+  cameraSpeed: 14
 --- !u!4 &885290850
 Transform:
   m_ObjectHideFlags: 0
@@ -1168,37 +1166,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &885290851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885290847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa0b8c8c3e87edf8fa251762a9a1f820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreToWin: 20
-  nextLevelName: Level3
-  NextLevelButton: {fileID: 968819545}
---- !u!114 &885290852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885290847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05678b529bbab195491a9c2907509938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 440193347}
-  scoreToWin: 20
-  nextLevelName: Level3
-  NextLevelButton: {fileID: 968819545}
 --- !u!1 &920099279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,7 +1284,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 885290852}
+      - m_Target: {fileID: 440193346}
         m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
         m_MethodName: NextLevel
         m_Mode: 1
@@ -2308,7 +2275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db87aa6617be424e81e96b2937d6632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.5
+  backgroundSpeed: 1.5
   backgroundRenderer: {fileID: 1893361039}
 --- !u!23 &1893361039
 MeshRenderer:
