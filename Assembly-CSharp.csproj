@@ -37,15 +37,17 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/CollisionWithPlayerAndBorder.cs" />
+     <Compile Include="Assets/Scripts/RandomMovement.cs" />
      <Compile Include="Assets/Scripts/CameraMovement.cs" />
      <Compile Include="Assets/Scripts/GameOver.cs" />
      <Compile Include="Assets/Scripts/Player.cs" />
+     <Compile Include="Assets/Scripts/BackgroundMusicIntro.cs" />
      <Compile Include="Assets/Scripts/Spawning.cs" />
      <Compile Include="Assets/Scripts/BackgroundMusic.cs" />
      <Compile Include="Assets/Scripts/LoopingBackground.cs" />
      <Compile Include="Assets/Scripts/ScoreManager.cs" />
      <Compile Include="Assets/Scripts/MainMenu.cs" />
-     <Compile Include="Assets/Scripts/BackgroundMusicIntro.cs" />
+     <Compile Include="Assets/Scripts/BouncingBack.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

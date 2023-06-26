@@ -13,7 +13,6 @@ public class CollisionWithPlayerAndBorder : MonoBehaviour
     public AudioClip soundeffect;
     public float volumeSoundeffect;
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,25 +23,50 @@ public class CollisionWithPlayerAndBorder : MonoBehaviour
     // Destroying it when touching tag: Border
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Border")
-        {
-            Destroy(this.gameObject);
-        }
-
-        else if(collision.tag == "Player")
-        {
-            if(gameObject.CompareTag("Obstacle"))
-            {
-                Destroy(player.gameObject);
-                AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
-            }
-            else
+       // // in the level 2 = obstacles/target bouncing inside the game scene
+       // if (gameObject.name == "Lv2_Obstacle")
+       // {
+            if(collision.tag == "Border" )
             {
                 Destroy(this.gameObject);
-                scoreManager.UpdateScore(pointValue);
-                AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
             }
-        }
-    }
-   
+
+            else if(collision.tag == "Player")
+            {
+                if(gameObject.CompareTag("Obstacle"))
+                {
+                    Destroy(player.gameObject);
+                    AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                    scoreManager.UpdateScore(pointValue);
+                    AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
+                }
+            }
+       /*  }
+        else 
+        {
+             if(collision.tag == "Border" || collision.tag == "TopBorder" || collision.tag ==  "BottomBorder")
+            {
+                Destroy(this.gameObject);
+            }
+
+            else if(collision.tag == "Player")
+            {
+                if(gameObject.CompareTag("Obstacle"))
+                {
+                    Destroy(player.gameObject);
+                    AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                    scoreManager.UpdateScore(pointValue);
+                    AudioSource.PlayClipAtPoint(soundeffect, transform.position, volumeSoundeffect);
+                }
+            }
+        } */
+    }   
 }
