@@ -11,9 +11,7 @@ public class BackgroundMusicIntro : MonoBehaviour
         if(backgroundMusic == null)
         {
             backgroundMusic = this;
-            //DontDestroyOnLoad(backgroundMusic);
         }
-
         else
         {
             Destroy(gameObject);

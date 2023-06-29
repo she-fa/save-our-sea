@@ -23,13 +23,13 @@ public class RandomMovement : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if(timeLeft <= 0)
         {
-            movement = new Vector2(Random.Range(-1f, 0), Random.Range(-1f, 1f));
+            movement = new Vector2(Random.Range(-1f, 0), Random.Range(-1f, 1f)); //new movement
             timeLeft += accelerationTime;
         }
     }
 
     void FixedUpdate()
     {
-        rb.AddForce(movement * maxSpeed);
+        rb.AddForce(movement * maxSpeed); // adding force with new movement
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
+//using UnityEditor;
 
 public class GameOver : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class GameOver : MonoBehaviour
     {
         if(GameObject.FindGameObjectWithTag("Player") == null)
         {
-            gameOverPanel.SetActive(true);
+            gameOverPanel.SetActive(true); // make the panel visible
         }
     }
 
@@ -26,7 +26,7 @@ public class GameOver : MonoBehaviour
     // Clicking Exit button
     public void ExitButton()
     {
-        EditorApplication.isPlaying = false; // for playing mode in editor
+        //EditorApplication.isPlaying = false; // for playing mode in editor
         Application.Quit(); // for quiting on the built version
     }
 }

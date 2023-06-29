@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 292540297}
-  scoreToWin: 10
+  scoreToWin: 100
   nextLevelName: Level2
   NextLevelButton: {fileID: 734542180}
 --- !u!1 &301875245

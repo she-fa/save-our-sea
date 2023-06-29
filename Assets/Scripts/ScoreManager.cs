@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
             // Deactivate the script on another GameObject named "OtherGameObject"
             GameObject otherObject = GameObject.Find("GameManager");
             otherObject.GetComponent<GameOver>().enabled = false;
-            NextLevelButton.SetActive(true);
+            NextLevelButton.SetActive(true); //making button visible
         }
     }
    
