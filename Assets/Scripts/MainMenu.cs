@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         #if UNITY_EDITOR
-            EditorApplication.isPlaying = false; // for playing mode in editor
+            // EditorApplication.isPlaying = false; // for playing mode in editor
         #endif
         
         Application.Quit(); // for quiting on the built version
